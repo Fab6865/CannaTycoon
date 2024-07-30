@@ -1,0 +1,627 @@
+<html><head><base href="https://static.moniteurautomobile.be/imgcontrol/images_tmp/clients/moniteur/c680-d465/content/medias/images/news/30000/0/20/lambo-sc18-09.jpg%20voiture%20de%20luxe%20%0Ahttps://media.licdn.com/dms/image/D4E12AQHV1XrrnnJqvg/article-cover_image-shrink_720_1280/0/1687342867003?e=2147483647&v=beta&t=sRySMFc4FhzfE9rkFmKr7NL-CNcg5LPzwBZJ04uwuWU%20maison%0Ahttps://i.f1g.fr/media/eidos/orig/2016/01/13/PHO9bcee780-728d-11e5-bc5c-ab3afdd5fdfa-805x453.jpg%20villa%0Ahttps://images.bfmtv.com/jd4AlCKL_XkQilAiNKBZRkoBssA=/0x0:1600x900/640x0/images/Cette-montre-de-luxe-pour-homme-a-prix-avantageux-fait-l-unanimite-aupres-des-connaisseurs-1681665.jpg%20montre%20de%20luxe">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cannabis Tycoon: Cultivez, Prospérez et Investissez</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 20px;
+  }
+  .game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #34495e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  h1, h2 {
+    text-align: center;
+    color: #2ecc71;
+  }
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 200px;
+    border-radius: 10px;
+  }
+  .plantation, .controls, .planting-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .plant {
+    width: 100px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .plant:hover {
+    transform: scale(1.05);
+  }
+  .plant-info, .plant-timer {
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .plant-timer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+  }
+  button {
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #27ae60;
+  }
+  #money, #inventory, #buyers, #boosters, #stocks, #luxury-items {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .inventory-item {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .buyer {
+    background-color: #2980b9;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .buyer button {
+    background-color: #e67e22;
+    margin-top: 5px;
+  }
+  .buyer button:hover {
+    background-color: #d35400;
+  }
+  #shop, #stock-market, #luxury-shop {
+    margin-top: 20px;
+    text-align: center;
+  }
+  #boosters {
+    display: flex;
+    justify-content: space-around;
+  }
+  .booster {
+    background-color: #8e44ad;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .stock {
+    background-color: #16a085;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .stock-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  .stock-info {
+    flex-grow: 1;
+    text-align: left;
+  }
+  .stock input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px;
+  }
+  .price-up {
+    color: #2ecc71;
+  }
+  .price-down {
+    color: #e74c3c;
+  }
+  .price-stable {
+    color: #f1c40f;
+  }
+  .stock-volatility {
+    font-size: 0.8em;
+    margin-left: 10px;
+  }
+  .luxury-item {
+    background-color: #e67e22;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .luxury-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  #save-status {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0.7);
+    color: #2ecc71;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <div class="game-container">
+    <img src="https://previews.123rf.com/images/myrioter/myrioter2208/myrioter220800083/191616884-nug-hold-money-bag-and-smoking-joint-weed-cannabis-bud-flower-marijuana-and-walk-relax-happy-face.jpg" alt="Cannabis Tycoon Logo" class="logo">
+    <h1>Cannabis Tycoon</h1>
+    <div id="money">Argent: $1000</div>
+    <div id="inventory">Inventaire: </div>
+    <div id="stocks">Actions: </div>
+    <div id="luxury-items">Objets de luxe: </div>
+    <div id="boosters">
+      <div class="booster">Booster de rendement: Inactif</div>
+      <div class="booster">Booster de croissance: Inactif</div>
+    </div>
+    <div class="plantation" id="plantation"></div>
+    <h2>Planter une nouvelle variété</h2>
+    <div class="planting-options" id="planting-options"></div>
+    <div class="controls">
+      <button onclick="harvestAll()">Récolter Tout</button>
+    </div>
+    <h2>Acheteurs</h2>
+    <div id="buyers"></div>
+    <div id="shop">
+      <h2>Boutique</h2>
+      <button onclick="unlockBuyer()">Débloquer un nouvel acheteur ($500)</button>
+      <button onclick="buyBooster('rendement')">Acheter booster de rendement ($200)</button>
+      <button onclick="buyBooster('croissance')">Acheter booster de croissance ($200)</button>
+    </div>
+    <div id="stock-market">
+      <h2>Marché Financier du Cannabis</h2>
+      <div id="stock-list"></div>
+    </div>
+    <div id="luxury-shop">
+      <h2>Boutique de Luxe</h2>
+      <div id="luxury-list"></div>
+    </div>
+  </div>
+  <div id="save-status"></div>
+
+  <script>
+    const cannabisTypes = [
+      { name: 'Sativa', growthTime: 30000, value: 100, cost: 50, image: 'https://www.aquaportail.com/pictures2101/fleur-cannabis-sativa.jpg' },
+      { name: 'Indica', growthTime: 25000, value: 80, cost: 40, image: 'https://www.shutterstock.com/image-photo/big-flowering-cannabis-plant-colored-600nw-2138759361.jpg' },
+      { name: 'Hybrid', growthTime: 27000, value: 90, cost: 45, image: 'https://sensiseeds.com/blog/wp-content/uploads/2022/09/2-Fruity-Juice-scaled.jpg' },
+      { name: 'CBD', growthTime: 23000, value: 70, cost: 35, image: 'https://www.cannaconnection.com/6815/industrial-plant.jpg' }
+    ];
+
+    const buyerNames = ['Alice', 'Bob', 'Charlie', 'David', 'Eve'];
+    let money = 1000;
+    let plants = [];
+    let inventory = {};
+    let buyers = [];
+    let unlockedBuyers = 2;
+    let rendementBooster = { active: false, endTime: 0 };
+    let croissanceBooster = { active: false, endTime: 0 };
+
+    let stocks = [
+      { name: 'CannaGrow', price: 50, owned: 0, history: [50], volatility: 0.2 },
+      { name: 'HempHarvest', price: 30, owned: 0, history: [30], volatility: 0.15 },
+      { name: 'GreenLeaf', price: 40, owned: 0, history: [40], volatility: 0.25 },
+      { name: 'MediHigh', price: 60, owned: 0, history: [60], volatility: 0.15}
+    ];
+
+    let luxuryItems = [
+      { name: 'Voiture de luxe', price: 100000, owned: 0, image: 'https://static.moniteurautomobile.be/imgcontrol/images_tmp/clients/moniteur/c680-d465/content/medias/images/news/30000/0/20/lambo-sc18-09.jpg' },
+      { name: 'Maison', price: 500000, owned: 0, image: 'https://media.licdn.com/dms/image/D4E12AQHV1XrrnnJqvg/article-cover_image-shrink_720_1280/0/1687342867003?e=2147483647&v=beta&t=sRySMFc4FhzfE9rkFmKr7NL-CNcg5LPzwBZJ04uwuWU' },
+      { name: 'Villa', price: 1000000, owned: 0, image: 'https://i.f1g.fr/media/eidos/orig/2016/01/13/PHO9bcee780-728d-11e5-bc5c-ab3afdd5fdfa-805x453.jpg' },
+      { name: 'Montre de luxe', price: 50000, owned: 0, image: 'https://images.bfmtv.com/jd4AlCKL_XkQilAiNKBZRkoBssA=/0x0:1600x900/640x0/images/Cette-montre-de-luxe-pour-homme-a-prix-avantageux-fait-l-unanimite-aupres-des-connaisseurs-1681665.jpg' }
+    ];
+
+    function updateMoney() {
+      document.getElementById('money').textContent = `Argent: $${money.toFixed(2)}`;
+    }
+
+    function updateInventory() {
+      const inventoryEl = document.getElementById('inventory');
+      inventoryEl.innerHTML = 'Inventaire: ';
+      for (const [type, amount] of Object.entries(inventory)) {
+        if (amount > 0) {
+          inventoryEl.innerHTML += `<span class="inventory-item">${type}: ${amount}g</span>`;
+        }
+      }
+    }
+
+    function updateStocks() {
+      const stocksEl = document.getElementById('stocks');
+      stocksEl.innerHTML = 'Actions: ';
+      stocks.forEach(stock => {
+        if (stock.owned > 0) {
+          stocksEl.innerHTML += `<span class="inventory-item">${stock.name}: ${stock.owned}</span>`;
+        }
+      });
+    }
+
+    function updateLuxuryItems() {
+      const luxuryEl = document.getElementById('luxury-items');
+      luxuryEl.innerHTML = 'Objets de luxe: ';
+      luxuryItems.forEach(item => {
+        if (item.owned > 0) {
+          luxuryEl.innerHTML += `<span class="inventory-item">${item.name}: ${item.owned}</span>`;
+        }
+      });
+    }
+
+    function updateBoosters() {
+      const boostersEl = document.getElementById('boosters');
+      boostersEl.innerHTML = `
+        <div class="booster">Booster de rendement: ${rendementBooster.active ? 'Actif' : 'Inactif'}</div>
+        <div class="booster">Booster de croissance: ${croissanceBooster.active ? 'Actif' : 'Inactif'}</div>
+      `;
+    }
+
+    function createPlantingOptions() {
+      const optionsContainer = document.getElementById('planting-options');
+      optionsContainer.innerHTML = '';
+      cannabisTypes.forEach(type => {
+        const button = document.createElement('button');
+        button.textContent = `Planter ${type.name} ($${type.cost})`;
+        button.onclick = () => plantCannabis(type);
+        optionsContainer.appendChild(button);
+      });
+    }
+
+    function plantCannabis(type) {
+      if (plants.length >= 4) {
+        alert("Vous ne pouvez pas planter plus de 4 plantes!");
+        return;
+      }
+
+      if (money < type.cost) {
+        alert("Vous n'avez pas assez d'argent pour planter cette variété!");
+        return;
+      }
+
+      money -= type.cost;
+      updateMoney();
+
+      const plant = { 
+        type, 
+        growth: 0, 
+        element: document.createElement('div'),
+        timerElement: document.createElement('div')
+      };
+      plant.element.className = 'plant';
+      plant.element.style.backgroundImage = `url('${type.image}')`;
+      plant.element.innerHTML = `
+        <div class="plant-timer"></div>
+        <div class="plant-info">${type.name}</div>
+      `;
+      plant.timerElement = plant.element.querySelector('.plant-timer');
+      document.getElementById('plantation').appendChild(plant.element);
+
+      plants.push(plant);
+      grow(plant);
+    }
+
+    function grow(plant) {
+      const startTime = Date.now();
+      const growInterval = setInterval(() => {
+        const elapsedTime = Date.now() - startTime;
+        const growthRate = croissanceBooster.active ? 2 : 1;
+        plant.growth = Math.min(100, (elapsedTime / (plant.type.growthTime / growthRate)) * 100);
+        
+        plant.element.style.opacity = 0.5 + (plant.growth / 200);
+        plant.timerElement.style.width = `${100 - plant.growth}%`;
+        
+        if (plant.growth >= 100) {
+          clearInterval(growInterval);
+          plant.element.style.opacity = 1;
+          plant.timerElement.style.display = 'none';
+        }
+      }, 100);
+    }
+
+    function harvestAll() {
+      plants.forEach(plant => {
+        if (plant.growth >= 100) {
+          const harvestAmount = rendementBooster.active ? 10 : 5; // 10g par plante avec le booster, sinon 5g
+          inventory[plant.type.name] = (inventory[plant.type.name] || 0) + harvestAmount;
+          document.getElementById('plantation').removeChild(plant.element);
+        }
+      });
+      plants = plants.filter(plant => plant.growth < 100);
+      updateInventory();
+    }
+
+    function generateBuyer() {
+      const name = buyerNames[Math.floor(Math.random() * unlockedBuyers)];
+      const type = cannabisTypes[Math.floor(Math.random() * cannabisTypes.length)].name;
+      const amount = Math.floor(Math.random() * 10) + 1; // 1 à 10g
+      const price = Math.floor(Math.random() * 50 + 50) * amount; // 50 à 100$ par gramme
+      return { name, type, amount, price };
+    }
+
+    function updateBuyers() {
+      const buyersContainer = document.getElementById('buyers');
+      buyersContainer.innerHTML = '';
+      buyers.forEach((buyer, index) => {
+        const buyerElement = document.createElement('div');
+        buyerElement.className = 'buyer';
+        buyerElement.innerHTML = `
+          ${buyer.name} veut ${buyer.amount}g de ${buyer.type} pour $${buyer.price}
+          <button onclick="sellToBuyer(${index})">Vendre</button>
+        `;
+        buyersContainer.appendChild(buyerElement);
+      });
+    }
+
+    function sellToBuyer(index) {
+      const buyer = buyers[index];
+      if (inventory[buyer.type] >= buyer.amount) {
+        inventory[buyer.type] -= buyer.amount;
+        money += buyer.price;
+        buyers.splice(index, 1);
+        updateMoney();
+        updateInventory();
+        updateBuyers();
+      } else {
+        alert("Vous n'avez pas assez de produit pour satisfaire cet acheteur!");
+      }
+    }
+
+    function unlockBuyer() {
+      if (unlockedBuyers < 5 && money >= 500) {
+        money -= 500;
+        unlockedBuyers++;
+        updateMoney();
+        alert(`Nouvel acheteur débloqué! Vous avez maintenant ${unlockedBuyers} acheteurs.`);
+      } else if (unlockedBuyers >= 5) {
+        alert("Vous avez déjà débloqué tous les acheteurs!");
+      } else {
+        alert("Vous n'avez pas assez d'argent pour débloquer un nouvel acheteur!");
+      }
+    }
+
+    function buyBooster(type) {
+      if (money >= 200) {
+        money -= 200;
+        updateMoney();
+        if (type === 'rendement') {
+          rendementBooster.active = true;
+          rendementBooster.endTime = Date.now() + 5 * 60 * 1000; // 5 minutes
+        } else if (type === 'croissance') {
+          croissanceBooster.active = true;
+          croissanceBooster.endTime = Date.now() + 5 * 60 * 1000; // 5 minutes
+        }
+        updateBoosters();
+        setTimeout(() => {
+          if (type === 'rendement') {
+            rendementBooster.active = false;
+          } else if (type === 'croissance') {
+            croissanceBooster.active = false;
+          }
+          updateBoosters();
+        }, 5 * 60 * 1000);
+      } else {
+        alert("Vous n'avez pas assez d'argent pour acheter ce booster!");
+      }
+    }
+
+    function updateStockMarket() {
+      stocks.forEach(stock => {
+        const volatilityFactor = (Math.random() - 0.5) * 2; // -1 to 1
+        const change = stock.price * stock.volatility * volatilityFactor;
+        stock.price = Math.max(1, stock.price + change);
+        stock.history.push(stock.price);
+        if (stock.history.length > 10) stock.history.shift();
+      });
+
+      const stockListEl = document.getElementById('stock-list');
+      stockListEl.innerHTML = '';
+      stocks.forEach(stock => {
+        const priceChange = stock.price - stock.history[stock.history.length - 2];
+        const priceChangePercentage = (priceChange / stock.history[stock.history.length - 2]) * 100;
+        let priceChangeClass, priceChangeSymbol;
+        if (Math.abs(priceChangePercentage) < 1) {
+          priceChangeClass = 'price-stable';
+          priceChangeSymbol = '▶';
+        } else if (priceChangePercentage >= 1) {
+          priceChangeClass = 'price-up';
+          priceChangeSymbol = '▲';
+        } else {
+          priceChangeClass = 'price-down';
+          priceChangeSymbol = '▼';
+        }
+        const stockEl = document.createElement('div');
+        stockEl.className = 'stock';
+        stockEl.innerHTML = `
+          <div class="stock-info">
+            <strong>${stock.name}</strong>: $${stock.price.toFixed(2)} 
+            <span class="${priceChangeClass}">${priceChangeSymbol} ${Math.abs(priceChangePercentage).toFixed(2)}%</span>
+            <span class="stock-volatility">Volatilité: ${(stock.volatility * 100).toFixed(0)}%</span>
+            | Prix moyen d'achat: $${(stock.history.reduce((a, b) => a + b, 0) / stock.history.length).toFixed(2)}
+          </div>
+          <div class="stock-buttons">
+            <input type="number" id="amount-${stock.name}" min="1" value="1">
+            <button onclick="tradeStock('${stock.name}', document.getElementById('amount-${stock.name}').value)">Acheter</button>
+            <button onclick="tradeStock('${stock.name}', -document.getElementById('amount-${stock.name}').value)">Vendre</button>
+          </div>
+        `;
+        stockListEl.appendChild(stockEl);
+      });
+    }
+
+    function tradeStock(stockName, amount) {
+      amount = parseInt(amount);
+      const stock = stocks.find(s => s.name === stockName);
+      if (amount > 0) { // Achat
+        if (money >= stock.price * amount) {
+          money -= stock.price * amount;
+          stock.owned += amount;
+        } else {
+          alert("Vous n'avez pas assez d'argent pour acheter ces actions!");
+          return;
+        }
+      } else { // Vente
+        if (stock.owned >= Math.abs(amount)) {
+          money += stock.price * Math.abs(amount);
+          stock.owned += amount; // amount est négatif ici
+        } else {
+          alert("Vous n'avez pas assez d'actions à vendre!");
+          return;
+        }
+      }
+      updateMoney();
+      updateStocks();
+      updateStockMarket();
+    }
+
+    function updateLuxuryShop() {
+      const luxuryListEl = document.getElementById('luxury-list');
+      luxuryListEl.innerHTML = '';
+      luxuryItems.forEach(item => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'luxury-item';
+        itemEl.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" class="luxury-image">
+          <div>
+            <div>${item.name}: $${item.price.toFixed(2)}</div>
+            <button onclick="buyLuxuryItem('${item.name}')">Acheter</button>
+          </div>
+        `;
+        luxuryListEl.appendChild(itemEl);
+      });
+    }
+
+    function buyLuxuryItem(itemName) {
+      const item = luxuryItems.find(i => i.name === itemName);
+      if (money >= item.price) {
+        money -= item.price;
+        item.owned++;
+        updateMoney();
+        updateLuxuryItems();
+        alert(`Félicitations ! Vous avez acheté ${item.name} !`);
+      } else {
+        alert("Vous n'avez pas assez d'argent pour acheter cet objet de luxe!");
+      }
+    }
+
+    function saveGame() {
+      const gameState = {
+        money,
+        inventory,
+        unlockedBuyers,
+        rendementBooster,
+        croissanceBooster,
+        stocks,
+        luxuryItems
+      };
+      localStorage.setItem('cannabisTycoonSave', JSON.stringify(gameState));
+      showSaveStatus("Partie sauvegardée");
+    }
+
+    function loadGame() {
+      const savedState = localStorage.getItem('cannabisTycoonSave');
+      if (savedState) {
+        const gameState = JSON.parse(savedState);
+        money = gameState.money;
+        inventory = gameState.inventory;
+        unlockedBuyers = gameState.unlockedBuyers;
+        rendementBooster = gameState.rendementBooster;
+        croissanceBooster = gameState.croissanceBooster;
+        stocks = gameState.stocks;
+        luxuryItems = gameState.luxuryItems;
+
+        updateMoney();
+        updateInventory();
+        updateBoosters();
+        updateStocks();
+        updateStockMarket();
+        updateLuxuryItems();
+        updateLuxuryShop();
+        showSaveStatus("Partie chargée");
+      } else {
+        showSaveStatus("Aucune sauvegarde trouvée", true);
+      }
+    }
+
+    function showSaveStatus(message, isError = false) {
+      const statusEl = document.getElementById('save-status');
+      statusEl.textContent = message;
+      statusEl.style.color = isError ? '#e74c3c' : '#2ecc71';
+      statusEl.style.display = 'block';
+      setTimeout(() => {
+        statusEl.style.display = 'none';
+      }, 3000);
+    }
+
+    function gameLoop() {
+      if (buyers.length < 3) {
+        buyers.push(generateBuyer());
+        updateBuyers();
+      }
+      
+      // Vérifier et mettre à jour l'état des boosters
+      const now = Date.now();
+      if (rendementBooster.active && now > rendementBooster.endTime) {
+        rendementBooster.active = false;
+        updateBoosters();
+      }
+      if (croissanceBooster.active && now > croissanceBooster.endTime) {
+        croissanceBooster.active = false;
+        updateBoosters();
+      }
+
+      // Mettre à jour le marché financier
+      updateStockMarket();
+
+      // Sauvegarder le jeu
+      saveGame();
+    }
+
+    // Initialisation
+    loadGame(); // Charger la partie sauvegardée au démarrage
+    updateMoney();
+    updateInventory();
+    updateBoosters();
+    updateStocks();
+    createPlantingOptions();
+    updateStockMarket();
+    updateLuxuryItems();
+    updateLuxuryShop();
+    setInterval(gameLoop, 10000); // Exécute le gameLoop toutes les 10 secondes
+  </script>
+</body>
+</html>
